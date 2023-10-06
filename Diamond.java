@@ -4,19 +4,23 @@ public class Diamond {
   public static void main(String[] args) {
     //variable graveyard
     int diamondSize;
-    int increment = 0;
 
-    // make sure code doesn't work for Less Than 2
+
     Scanner scan = new Scanner(System.in);
     System.out.println("Insert size:");
     diamondSize = scan.nextInt();
-    if (diamondSize > 2);{
-      for(diamondSize%2==1;);{
+    if(diamondSize%2!=0 && diamondSize > 2){ //makes sure the diamond is odd, doesn't run if diamond is smaller than 2
+      for(int i = 0; diamondSize > i; i++){
         System.out.println("+");
-        increment++;
       }
-    }
     scan.close();
+    }
+    else if(diamondSize > 2){ //runs even diamond sizes, makes sure diamond is big enough
+      for(int i = 0; diamondSize > i; i++){
+        System.out.println("++");
+    }
+  }
+
 
   }
 }
