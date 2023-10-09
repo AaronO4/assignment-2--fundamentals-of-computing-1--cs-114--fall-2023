@@ -19,7 +19,7 @@ int diamond = 1;
             System.out.println(" ");
       }
             for (int rows = halfDiamond; rows >= 1; --rows) {
-              for (diamond = halfDiamond*2; rows <= diamond; --diamond)
+              for (diamond = halfDiamond; rows <= diamond; --diamond)
               System.out.print("*");
               System.out.println(" ");
             }
@@ -28,7 +28,7 @@ int diamond = 1;
     }
     if(diamondSize > 2 && diamondSize%2 == 0 ){ //runs even diamonds, makes sure diamond is big enough
       for(int rows = 1; halfDiamond >= rows; ++rows){
-        for (int spaces = 0; spaces <= halfDiamond; ++spaces)
+        for (int spaces = 0; spaces <= diamond; ++spaces)
           System.out.print(" ");
         for (diamond = 1; diamond <= rows; ++diamond)
           System.out.print("* ");
