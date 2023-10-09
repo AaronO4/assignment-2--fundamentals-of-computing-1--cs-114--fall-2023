@@ -15,9 +15,14 @@ int diamond = 1;
     if(diamondSize > 2 && diamondSize%2 != 0){ //makes sure the diamond is odd, doesn't run if diamond is smaller than 2
       for(int rows = 1; halfDiamond >= rows; ++rows){
           for (diamond = 1; diamond <= rows; ++diamond)
-            System.out.print("+");
-          System.out.println(" ");
+            System.out.print("*");
+            System.out.println(" ");
       }
+            for (int rows = halfDiamond; rows >= 1; --rows) {
+              for (diamond = halfDiamond; rows <= diamond; --diamond)
+              System.out.print("*");
+              System.out.println(" ");
+            }
 
     scan.close();
     }
@@ -27,6 +32,12 @@ int diamond = 1;
           System.out.print("* ");
           System.out.println(" ");
     }
+
+     for (int rows = halfDiamond; rows >= 1; --rows) {
+      for (diamond = halfDiamond; rows <= diamond; --diamond)
+        System.out.print("* ");
+          System.out.println(" ");
+      }
   }
 
   }
