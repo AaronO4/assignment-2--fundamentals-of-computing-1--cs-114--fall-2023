@@ -26,21 +26,22 @@ public class Diamond {
     }
 
     if(diamondSize > 2 && diamondSize%2 == 0){ //runs even diamonds, makes sure diamond is big enough
-      for(int rows = 1; diamondSize/2 >= rows-1; ++rows){
-        // for (int spaces = diamondSize/2; spaces <= asterisk; ++spaces){
-        //   System.out.print(" ");
-            for (asterisk = 1; asterisk <= rows; asterisk++)
+      for(int rows = 1; diamondSize/2 + 1 >= rows; ++rows){
+        for (int spaces = 1; spaces <= diamondSize + 1 - rows; spaces++){
+          System.out.print(" ");
+        }
+            for (asterisk = 1; asterisk <= rows*2 - 1; asterisk += 2)
               System.out.print(" *");
               System.out.println(" ");
-        //}
+
+      // for (rows = 1; diamondSize/2 + 1 <= rows; --rows)// decrementing
+      //   for (int spaces = 1; spaces <= diamondSize - 1 + rows; spaces--)
+      //     System.out.print(" ");
+
+      // for (asterisk = diamondSize/2; asterisk >= rows*2 - 1; asterisk--) // because its even, asterisk must decrease by 1
+      //   System.out.print(" *");
+      //   System.out.println(" ");
     }
-
-     for (int rows = diamondSize/2; rows >= 1; --rows) { // decrementing
-      for (asterisk = diamondSize/2; rows <= asterisk; asterisk--) // because its even, asterisk must decrease by 1
-        System.out.print(" *");
-          System.out.println(" ");
-      }
   }
-
   }
 }
