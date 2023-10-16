@@ -12,13 +12,15 @@ public class Diamond {
     diamondSize = scan.nextInt(); // user input, diamond size
 
     if(diamondSize > 2 && diamondSize%2 != 0){ //makes sure the diamond is odd, doesn't run if diamond is smaller than 2
-      for(int rows = 1; rows <= diamondSize; ++rows){
-          for (asterisk = 0; asterisk < rows; asterisk+=2) // increases by 2 because it's odd
-            System.out.print("*");
-            System.out.println(" ");
+      for(int rows = 1; rows <= diamondSize/2 + 1; ++rows){
+        // for (int spaces = 1; spaces <= diamondSize + 1 - rows; spaces++)
+        //   System.out.print(" ");
+            for (asterisk = 0; asterisk < rows; asterisk+=2) // increases by 2 because it's odd
+              System.out.print("*");
+              System.out.println(" ");
       }
-            for (int rows = diamondSize/2; rows >= 1; --rows) { // decrementing
-              for (asterisk = diamondSize/2; rows <= asterisk; asterisk-=2)
+            for (int rows = 1; diamondSize/2 >= rows; ++rows) { // decrementing
+              for (asterisk = diamondSize/2; rows <= asterisk; asterisk -= 2)
                 System.out.print("*");
                 System.out.println(" ");
           }
@@ -27,9 +29,9 @@ public class Diamond {
 
     if(diamondSize > 2 && diamondSize%2 == 0){ //runs even diamonds, makes sure diamond is big enough
       for(int rows = 1; diamondSize/2 + 1 >= rows; ++rows){
-        for (int spaces = 1; spaces <= diamondSize + 1 - rows; spaces++){
+        for (int spaces = 1; spaces <= diamondSize + 1 - rows; spaces++)
           System.out.print(" ");
-        }
+
             for (asterisk = 1; asterisk <= rows*2 - 1; asterisk += 2)
               System.out.print(" *");
               System.out.println(" ");
