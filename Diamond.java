@@ -28,15 +28,15 @@ public class Diamond {
                 System.out.print("*");
                 System.out.println(" ");
           }
-    scan.close();
+    scan.close(); // closes scan OUTSIDE of nested for loops
     }
 
-    if(diamondSize > 2 && diamondSize%2 == 0){ //runs even diamonds, makes sure diamond is big enough
+    if(diamondSize > 1 && diamondSize%2 == 0){ //runs even diamonds, makes sure diamond is big enough
       for(int rows = 1; diamondSize/2 + 1 >= rows; ++rows){
         for (int spaces = 1; spaces <= diamondSize/2 + 1 - rows; spaces++){
           System.out.print(" ");
         }
-            for (asterisk = 1; asterisk <= rows*2 - 1; asterisk += 2)
+            for (asterisk = 1; asterisk <= rows*2; asterisk += 2)
               System.out.print(" *");
               System.out.println(" ");
       }
