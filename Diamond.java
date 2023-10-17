@@ -36,7 +36,7 @@ public class Diamond {
         for (int spaces = 1; spaces <= diamondSize/2 + 1 - rows; spaces++){
           System.out.print(" ");
         }
-            for (asterisk = 1; asterisk <= rows*2; asterisk += 2)
+            for (asterisk = 1; asterisk <= rows*2 - 1; asterisk++)
               System.out.print(" *");
               System.out.println(" ");
       }
@@ -45,7 +45,7 @@ public class Diamond {
         for (int spaces = 1; spaces <= diamondSize/2 + 1 - rows; spaces++){
           System.out.print(" ");
         }
-      for (asterisk = 1; asterisk <= rows; asterisk++)
+      for (asterisk = 1; asterisk <= rows*2 - 1; asterisk++)
         System.out.print(" *");
         System.out.println(" ");
     }
